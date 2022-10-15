@@ -1,7 +1,17 @@
-.discover__mainText {
-  position: relative;
+/* .discover__mainText {
+  position: absolute;
+  right: 0;
+  left: 0;
   text-align: center;
   font-size: 48px;
   z-index: 3;
   letter-spacing: 0.014em;
+} */
+
+.features {
+  background-color: rgba(255, 101, 132, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
 }

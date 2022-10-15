@@ -4,9 +4,14 @@ import "./Home.css";
 
 function Home() {
   return (
-    <div>
+    <div className="landing">
       <Hero />
-      <h1 className="discover__mainText">Discover</h1>
+      <section className="features">
+        <h1 className="discover__mainText">Discover</h1>
+        <div className="text__container">
+          <h1>Yeah</h1>
+        </div>
+      </section>
     </div>
   );
 }

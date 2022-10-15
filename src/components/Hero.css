@@ -1,10 +1,11 @@
-.LandingPage {
-  margin: 0 auto;
-  max-width: 1300px;
+.Hero {
+  position: relative;
   padding: 20px;
-  /* height: 100vh; */
 }
 .hero__container {
+  max-width: 1300px;
+  margin: 0 auto;
+
   height: calc(100vh - 8vh);
   display: flex;
   align-items: center;
@@ -68,23 +69,5 @@
 }
 
 .custom-shape-divider-bottom-1665813386 .shape-fill {
-  fill: rgba(255, 101, 132, 0.2);
-}
-
-.custom-shape-divider-top-1665813741 {
-  position: absolute;
-  left: 0;
-  top: 100vh;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-top-1665813741 svg {
-  height: 300px;
-}
-
-.custom-shape-divider-top-1665813741 .shape-fill {
   fill: rgba(255, 101, 132, 0.2);
 }

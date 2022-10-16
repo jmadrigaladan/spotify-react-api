@@ -7,9 +7,11 @@ function Home() {
     <div className="landing">
       <Hero />
       <section className="features">
-        <h1 className="discover__mainText">Discover</h1>
         <div className="text__container">
-          <h1>Yeah</h1>
+          <h1>
+            Let your passion for music bring you new{" "}
+            <span className="purpleText">discoveries</span>
+          </h1>
         </div>
       </section>
     </div>

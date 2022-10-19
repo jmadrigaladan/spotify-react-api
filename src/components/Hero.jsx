@@ -12,7 +12,7 @@ function Hero() {
           <figure className="img__container">
             <img src={heroImage} alt="" className="heroImage" />
           </figure>
-          <div className="text__container">
+          <div className="heroText__container">
             <h1 className="hero__mainText">
               Analyze Music <span className="pinkText"> you enjoy</span> with no
               limits<span className="pinkText">.</span>

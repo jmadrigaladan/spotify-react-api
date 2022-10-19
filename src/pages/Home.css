@@ -7,15 +7,78 @@
   z-index: 3;
   letter-spacing: 0.014em;
 } */
+.landing {
+  margin: 0 auto;
+}
 
 .features {
   background-color: rgba(255, 101, 132, 0.2);
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 400px;
+  min-height: 70vh;
+  padding: 20px;
+  /* justify-content: center; */
+  /* min-height: 400px; */
+}
+
+.features__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .purpleText {
   color: #756dff;
+}
+
+.discovering__link {
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+  color: #756dff;
+  font-weight: 600;
+}
+
+.features__mainText {
+  font-size: 54px;
+}
+
+.features__subText {
+  margin-top: 32px;
+  font-size: 18px;
+  width: 80%;
+  text-align: left;
+}
+
+.featuresText__container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.cards__container {
+  width: 50%;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.link__container {
+  margin-top: 24px;
+}
+
+.cards__container {
+  position: relative;
+}
+
+.cardOne,
+.cardTwo {
+  position: absolute;
+}
+
+.cardOne,
+.cardTwo {
+  top: 0;
+  left: 0;
 }

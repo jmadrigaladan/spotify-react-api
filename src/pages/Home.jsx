@@ -6,6 +6,9 @@ import { ArrowForward } from "@material-ui/icons";
 import MusicCard from "../components/MusicCard.jsx";
 import BadBunnyAlbumCover from "../assets/badBunny.jpg";
 import harryStylesAlbumCover from "../assets/harryStyles.jpg";
+import nickYoureAlbumCover from "../assets/sunroof.jpg";
+import cardBg from "../assets/cardbg.svg";
+import blob from "../assets/blob.svg";
 
 function Home() {
   return (
@@ -31,19 +34,43 @@ function Home() {
             </div>
           </div>
           <div className="cards__container">
-            <div className="cardOne">
-              <MusicCard
-                artistName={"Bad Bunny"}
-                songName={"Titi Me Pregunto"}
-                songCover={BadBunnyAlbumCover}
-              />
-            </div>
-            <div className="cardTwo">
-              <MusicCard
-                artistName={"Harry Styles"}
-                songName={"As It Was"}
-                songCover={harryStylesAlbumCover}
-              />
+            <div className="deck">
+              <div className="cardOne">
+                <MusicCard
+                  artistName={"Harry Styles"}
+                  songName={"As It Was"}
+                  songCover={harryStylesAlbumCover}
+                  songLink={
+                    "http://open.spotify.com/album/2pqdSWeJVsXAhHFuVLzuA8?highlight=spotify:track:4LRPiXqCikLlN15c3yImP7"
+                  }
+                />
+                <div className="blob">
+                  <img src={blob} alt="" />
+                </div>
+                <div className="cardBg">
+                  <img src={cardBg} alt="" />
+                </div>
+                <div className="cardTwo">
+                  <MusicCard
+                    artistName={"Nick Youre"}
+                    songName={"Sunroof"}
+                    songCover={nickYoureAlbumCover}
+                    songLink={
+                      "http://open.spotify.com/album/0VaHnwzDug4AcDkejYDUl5?highlight=spotify:track:4h4QlmocP3IuwYEj2j14p8"
+                    }
+                  />
+                  <div className="cardThree">
+                    <MusicCard
+                      artistName={"Bad Bunny"}
+                      songName={"Titi Me Pregunto"}
+                      songCover={BadBunnyAlbumCover}
+                      songLink={
+                        "http://open.spotify.com/album/3RQQmkQEvNCY4prGKE6oc5?highlight=spotify:track:1IHWl5LamUGEuP4ozKQSXZ"
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -78,7 +78,7 @@ function Testimonials() {
               <p className="testimonial__text">
                 EDM was a genre I always disliked, but after discovering it with
                 heardfrom, I fell in love with it. I'll be going to my first
-                rave next month. <i>- Karla</i>
+                rave next month. <i>-Karla</i>
               </p>
               <Avatar className="avatar__testimonial" src={headshotTwo} />
             </div>

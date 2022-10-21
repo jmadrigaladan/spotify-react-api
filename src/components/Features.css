@@ -1,0 +1,92 @@
+.features {
+  background-color: rgba(255, 101, 132, 0.2);
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.features__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.purpleText {
+  color: #756dff;
+}
+
+.discovering__link {
+  display: flex;
+  align-items: center;
+  /* text-decoration: underline; */
+  color: #756dff;
+  font-weight: 600;
+}
+
+.arrow__link {
+  margin-left: 12px;
+}
+
+.features__mainText {
+  font-size: 54px;
+}
+
+.features__subText {
+  margin-top: 32px;
+  font-size: 18px;
+  width: 80%;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.featuresText__container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.cards__container {
+  width: 50%;
+  margin-left: 40px;
+}
+
+.link__container {
+  margin-top: 24px;
+}
+
+.deck {
+  /* position: relative; */
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 56px;
+}
+
+.cardOne {
+  position: relative;
+  z-index: 4;
+}
+.cardTwo,
+.cardThree {
+  position: absolute;
+  top: 105px;
+  left: 150px;
+  z-index: 5;
+}
+
+.cardBg {
+  font-size: 20px;
+  position: absolute;
+  top: 115px;
+  left: 20px;
+  z-index: -1;
+}
+
+.blob {
+  position: absolute;
+  top: -48px;
+  left: 186px;
+}

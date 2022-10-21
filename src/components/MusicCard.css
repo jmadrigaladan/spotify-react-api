@@ -1,7 +1,5 @@
 .horizontal__card {
   width: 205px;
-  /* border: 1px solid red; */
-
   background-color: white;
   border-radius: 5px;
 }
@@ -12,13 +10,8 @@
   transform: scale(0.98);
 }
 
-/* .song__img--wrapper {
-  width: 100%;
-} */
-
 .song__img {
   width: 100%;
-  /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); */
   height: 170px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;

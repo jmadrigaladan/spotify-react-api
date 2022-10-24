@@ -45,7 +45,7 @@ function Features() {
                 <img src={blob} alt="" />
               </div>
               <div className="cardBg">
-                <img src={cardBg} alt="" />
+                <img className="card__background" src={cardBg} alt="" />
               </div>
               <div className="cardTwo">
                 <MusicCard

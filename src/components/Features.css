@@ -23,6 +23,7 @@
   align-items: center;
   /* text-decoration: underline; */
   color: #756dff;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -31,7 +32,7 @@
 }
 
 .features__mainText {
-  font-size: 54px;
+  font-size: 48px;
 }
 
 .features__subText {
@@ -89,4 +90,47 @@
   position: absolute;
   top: -48px;
   left: 186px;
+}
+
+@media (max-width: 1079px) {
+  .featuresText__container {
+    width: 50%;
+  }
+  .features__mainText {
+    font-size: 36px;
+    width: 100%;
+  }
+  .features__subText {
+    font-size: 16px;
+    width: 100%;
+  }
+  .horizontal__card--wrapper {
+    width: 180px !important;
+    height: 300px !important;
+  }
+  .horizontal__card {
+    width: 180px !important;
+  }
+  .cards__container {
+    width: 50%;
+    margin-left: 56px;
+  }
+
+  .songText__container {
+    margin: 0 0 8px 0;
+  }
+
+  .song__title--text,
+  .artist__name--text {
+    font-size: 12px !important;
+  }
+
+  .cardTwo,
+  .cardThree {
+    top: 90px;
+    left: 130px;
+  }
+  /* .card__background {
+    width: 300px;
+  } */
 }

@@ -17,7 +17,7 @@ function MusicCard({ artistName, songName, songCover, songLink }) {
           <div className="song__img--wrapper">
             <img className="song__img" src={songCover} alt="" />
           </div>
-          <div className="text__container">
+          <div className="songText__container">
             <h1 className="song__title--text">{songName}</h1>
             <h2 className="artist__name--text">{artistName}</h2>
             <div className="controls__container">

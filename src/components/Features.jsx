@@ -6,7 +6,6 @@ import MusicCard from "./MusicCard.jsx";
 import BadBunnyAlbumCover from "../assets/badBunny.jpg";
 import harryStylesAlbumCover from "../assets/harryStyles.jpg";
 import nickYoureAlbumCover from "../assets/sunroof.jpg";
-import cardBg from "../assets/cardbg.svg";
 import blob from "../assets/blob.svg";
 
 function Features() {
@@ -43,9 +42,6 @@ function Features() {
               />
               <div className="blob">
                 <img src={blob} alt="" />
-              </div>
-              <div className="cardBg">
-                <img className="card__background" src={cardBg} alt="" />
               </div>
               <div className="cardTwo">
                 <MusicCard

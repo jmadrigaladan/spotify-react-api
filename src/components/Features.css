@@ -91,6 +91,10 @@
   left: 186px;
 }
 
+.deck__horiz {
+  display: none;
+}
+
 @media (max-width: 1079px) {
   .featuresText__container {
     width: 50%;
@@ -192,7 +196,18 @@
   }
   .cards__container {
     width: 100%;
+    display: flex;
     justify-content: center;
-    margin-left: 45%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .deck {
+    display: none;
+  }
+  .deck__horiz {
+    display: block;
+  }
+  .cardOne__deckHoriz {
+    margin-bottom: 24px;
   }
 }

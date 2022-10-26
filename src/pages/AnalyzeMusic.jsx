@@ -1,10 +1,10 @@
 import React from "react";
-
+import "./AnalyzeMusic.css";
 function AnalyzeMusic() {
   return (
-    <div>
+    <>
       <h1>Analyze Music Page</h1>
-    </div>
+    </>
   );
 }
 

@@ -1,0 +1,46 @@
+.musicCardHoriz__container {
+  background-color: white;
+  width: 240px;
+  height: 95px;
+  display: flex;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 16px;
+}
+
+.musicCardHoriz__container:hover {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.songImage__wrapper {
+  width: 40%;
+}
+
+.songImage__musicCardHoriz {
+  width: 100%;
+}
+
+.songInfo__container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.songTitle__text {
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+.songTitle__text,
+.artistName__text {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.artistName__text {
+  font-size: 14px;
+  font-weight: 400;
+}

@@ -7,6 +7,7 @@ import BadBunnyAlbumCover from "../assets/badBunny.jpg";
 import harryStylesAlbumCover from "../assets/harryStyles.jpg";
 import nickYoureAlbumCover from "../assets/sunroof.jpg";
 import blob from "../assets/blob.svg";
+import MusicCardHoriz from "./MusicCardHoriz.jsx";
 
 function Features() {
   return (
@@ -29,7 +30,37 @@ function Features() {
             </Link>
           </div>
         </div>
+
         <div className="cards__container">
+          <div className="deck__horiz">
+            <MusicCardHoriz
+              className="cardOne__deckHoriz"
+              artistName={"Harry Styles"}
+              songName={"As It Was"}
+              songCover={harryStylesAlbumCover}
+              songLink={
+                "http://open.spotify.com/album/2pqdSWeJVsXAhHFuVLzuA8?highlight=spotify:track:4LRPiXqCikLlN15c3yImP7"
+              }
+            />
+            <MusicCardHoriz
+              className="cardTwo__deckHoriz"
+              artistName={"Nick Youre"}
+              songName={"Sunroof"}
+              songCover={nickYoureAlbumCover}
+              songLink={
+                "http://open.spotify.com/album/0VaHnwzDug4AcDkejYDUl5?highlight=spotify:track:4h4QlmocP3IuwYEj2j14p8"
+              }
+            />
+            <MusicCardHoriz
+              className="cardThree__deckHoriz"
+              artistName={"Bad Bunny"}
+              songName={"Titi Me Pregunto"}
+              songCover={BadBunnyAlbumCover}
+              songLink={
+                "http://open.spotify.com/album/3RQQmkQEvNCY4prGKE6oc5?highlight=spotify:track:1IHWl5LamUGEuP4ozKQSXZ"
+              }
+            />
+          </div>
           <div className="deck">
             <div className="cardOne">
               <MusicCard

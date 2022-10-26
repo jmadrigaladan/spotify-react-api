@@ -4,6 +4,10 @@ import "./Nav.css";
 import logoPurple from "../assets/heardfrom text logo PURPLE.svg";
 
 function Nav() {
+  const phoneMenu = document.querySelector(".phone__menu");
+  const bentoMenu = document.querySelector(".bento-menu");
+  const closeBtnMenu = document.querySelector(".close__btn-menu");
+
   return (
     <nav>
       <div className="nav__container">
@@ -28,7 +32,14 @@ function Nav() {
           </li>
         </ul>
 
-        {/* <div className="phone__navbar">
+        <div
+          className="phone__navbar"
+          onClick={() => {
+            phoneMenu.classList.toggle("phone__menu--active");
+            bentoMenu.classList.toggle("bento-menu--active");
+            closeBtnMenu.classList.toggle("close__btn-menu--active");
+          }}
+        >
           <div data-v-48b363cf="" className="bento-menu">
             <div data-v-48b363cf=""></div>
             <div data-v-48b363cf=""></div>
@@ -54,7 +65,7 @@ function Nav() {
               Contact
             </Link>
           </div>
-        </div> */}
+        </div>
       </div>
     </nav>
   );

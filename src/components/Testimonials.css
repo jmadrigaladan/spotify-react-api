@@ -94,6 +94,8 @@
 .testimonialsLink {
   margin-top: 16px;
   font-size: 18px;
+  display: flex;
+  justify-content: center;
 }
 
 .open__testTwo {
@@ -117,4 +119,22 @@
   left: 0;
   bottom: 5px;
   width: 80px;
+}
+
+@media (max-width: 1079px) {
+  .testimonials__mainText {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial__rowOne {
+    flex-direction: column-reverse;
+  }
+  .testimonial__rowTwo {
+    margin-top: 54px;
+  }
+  .testimonials__textContainer {
+    margin-bottom: 24px;
+  }
 }

@@ -102,3 +102,10 @@ button {
 .pinkText {
   color: #ff6584;
 }
+
+.pink {
+  color: #ff6584;
+}
+.pink::after {
+  background-color: #ff6584;
+}

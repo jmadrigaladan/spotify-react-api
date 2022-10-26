@@ -17,11 +17,15 @@
 .purpleText {
   color: #756dff;
 }
+.link__container {
+  margin-top: 24px;
+  text-align: left;
+}
 
 .discovering__link {
   display: flex;
+  width: 100%;
   align-items: center;
-  /* text-decoration: underline; */
   color: #756dff;
   font-size: 18px;
   font-weight: 600;
@@ -46,16 +50,13 @@
 .featuresText__container {
   display: flex;
   flex-direction: column;
+  justify-content: start;
   width: 50%;
 }
 
 .cards__container {
   width: 50%;
   margin-left: 40px;
-}
-
-.link__container {
-  margin-top: 24px;
 }
 
 .deck {
@@ -133,10 +134,6 @@
     top: 60px;
     left: 128px;
   }
-  /* .card__background {
-    width: 300px;
-  }
-*/
 }
 
 @media (max-width: 956px) {

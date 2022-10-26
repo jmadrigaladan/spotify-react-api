@@ -47,10 +47,12 @@ function Testimonials() {
                 The best way to discover new{" "}
                 <span className="pinkText">love</span> for music
               </h1>
-              <Link className="discovering__link pink testimonialsLink">
-                Start discovering
-                <ArrowForward className="arrow__link" />
-              </Link>
+              <div className="testimonial__link--container">
+                <Link className="discovering__link pink testimonialsLink hover-underline-animation">
+                  Start discovering
+                  <ArrowForward className="arrow__link" />
+                </Link>
+              </div>
             </div>
           </div>
           <div className="testimonial__rowTwo">

@@ -1,13 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Close } from "@material-ui/icons";
 import "./Nav.css";
 import logoPurple from "../assets/heardfrom text logo PURPLE.svg";
 
 function Nav() {
-  const phoneMenu = document.querySelector(".phone__menu");
-  const bentoMenu = document.querySelector(".bento-menu");
-  const closeBtnMenu = document.querySelector(".close__btn-menu");
-
+  const [isClassToggled, setIsClassToggled] = React.useState(false);
   return (
     <nav>
       <div className="nav__container">
@@ -34,13 +32,14 @@ function Nav() {
 
         <div
           className="phone__navbar"
-          onClick={() => {
-            phoneMenu.classList.toggle("phone__menu--active");
-            bentoMenu.classList.toggle("bento-menu--active");
-            closeBtnMenu.classList.toggle("close__btn-menu--active");
-          }}
+          onClick={() => setIsClassToggled(!isClassToggled)}
         >
-          <div data-v-48b363cf="" className="bento-menu">
+          <div
+            data-v-48b363cf=""
+            className={`bento-menu ${
+              isClassToggled ? "bento-menu--active" : " "
+            }`}
+          >
             <div data-v-48b363cf=""></div>
             <div data-v-48b363cf=""></div>
             <div data-v-48b363cf=""></div>
@@ -51,10 +50,18 @@ function Nav() {
             <div data-v-48b363cf=""></div>
             <div data-v-48b363cf=""></div>
           </div>
-          <div className="close__btn-menu">
-            <i className="fa-solid fa-xmark"></i>
+          <div
+            className={`close__btn-menu ${
+              isClassToggled ? "close__btn-menu--active" : " "
+            }`}
+          >
+            <Close />
           </div>
-          <div className="phone__menu">
+          <div
+            className={`phone__menu ${
+              isClassToggled ? "phone__menu--active" : " "
+            }`}
+          >
             <Link className="phone__nav--link" to="/">
               Home
             </Link>
@@ -70,5 +77,4 @@ function Nav() {
     </nav>
   );
 }
-
 export default Nav;

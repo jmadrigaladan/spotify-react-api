@@ -55,7 +55,7 @@ function Nav() {
               isClassToggled ? "close__btn-menu--active" : " "
             }`}
           >
-            <Close />
+            <Close sx={{ fontSize: "40px" }} />
           </div>
           <div
             className={`phone__menu ${

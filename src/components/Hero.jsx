@@ -4,10 +4,20 @@ import heroImage from "../assets/undraw_imagination_re_i0xi 1.svg";
 import "./Hero.css";
 
 function Hero() {
+  const heroRef = React.useRef();
+  const [isPageRefreshed, setIsPageRefreshed] = React.useState(false);
+  React.useEffect(() => {
+    setIsPageRefreshed(true);
+  }, []);
   return (
     <div className="Hero">
       <Nav />
-      <div className="hero__container">
+      <section
+        ref={heroRef}
+        className={`hero__container hidden-leftSlide ${
+          isPageRefreshed ? "show" : ""
+        }`}
+      >
         <div className="hero__wrapper">
           <figure className="img__container">
             <img src={heroImage} alt="" className="heroImage" />
@@ -26,7 +36,7 @@ function Hero() {
             </button>
           </div>
         </div>
-      </div>
+      </section>
       <div className="custom-shape-divider-bottom-1665813386">
         <svg
           data-name="Layer 1"

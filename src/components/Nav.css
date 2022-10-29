@@ -132,3 +132,7 @@
 .close__btn-menu--active {
   opacity: 1;
 }
+
+.close__btn-menu > .MuiSvgIcon-root {
+  font-size: 40px;
+}

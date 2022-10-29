@@ -10,9 +10,28 @@ import blob from "../assets/blob.svg";
 import MusicCardHoriz from "./MusicCardHoriz.jsx";
 
 function Features() {
+  const featuresRef = React.useRef();
+  const [isPageRefreshed, setIsPageRefreshed] = React.useState(false);
+  const [isFeaturesVisible, setIsFeaturesVisible] = React.useState();
+  React.useEffect(() => {
+    console.log("Hi");
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      console.log("entry", entry);
+      setIsFeaturesVisible(entry.isIntersecting);
+    });
+    observer.observe(featuresRef.current);
+    setIsPageRefreshed(true);
+  }, []);
+
   return (
     <section className="features">
-      <div className="features__wrapper">
+      <div
+        ref={featuresRef}
+        className={`features__wrapper hidden-rightSlide ${
+          isFeaturesVisible && isPageRefreshed ? "show" : " "
+        } `}
+      >
         <div className="featuresText__container">
           <h1 className="features__mainText">
             Let your passion for music bring you new{" "}

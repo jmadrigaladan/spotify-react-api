@@ -11,7 +11,7 @@ function Hero() {
   }, []);
   return (
     <div className="Hero">
-      <Nav />
+      <Nav analyzeMusic={false} />
       <section
         ref={heroRef}
         className={`hero__container hidden-leftSlide ${

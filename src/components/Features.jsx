@@ -11,17 +11,17 @@ import MusicCardHoriz from "./MusicCardHoriz.jsx";
 
 function Features() {
   const featuresRef = React.useRef();
-  const [isPageRefreshed, setIsPageRefreshed] = React.useState(false);
   const [isFeaturesVisible, setIsFeaturesVisible] = React.useState();
   React.useEffect(() => {
-    console.log("Hi");
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       console.log("entry", entry);
-      setIsFeaturesVisible(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIsFeaturesVisible(entry.isIntersecting);
+        observer.unobserve(entry.target);
+      }
     });
     observer.observe(featuresRef.current);
-    setIsPageRefreshed(true);
   }, []);
 
   return (
@@ -29,7 +29,7 @@ function Features() {
       <div
         ref={featuresRef}
         className={`features__wrapper hidden-rightSlide ${
-          isFeaturesVisible && isPageRefreshed ? "show" : " "
+          isFeaturesVisible ? "show" : " "
         } `}
       >
         <div className="featuresText__container">

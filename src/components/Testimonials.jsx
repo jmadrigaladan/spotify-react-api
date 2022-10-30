@@ -14,15 +14,35 @@ import testimonialCardBlobThree from "../assets/Ellipse 8.svg";
 import testimonialCardBlobFour from "../assets/Ellipse 9.svg";
 
 function Testimonials() {
+  const testimonialsRef = React.useRef();
+  const [isTestimonialsVisible, setIsTestimonialsVisible] = React.useState();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      console.log("entry", entry);
+      if (entry.isIntersecting) {
+        setIsTestimonialsVisible(entry.isIntersecting);
+        observer.unobserve(entry.target);
+      }
+    });
+    observer.observe(testimonialsRef.current);
+  }, []);
+
   return (
     <>
       <section
+        ref={testimonialsRef}
         className="testimonials"
         style={{ backgroundImage: `url(${testimonialsPattern})` }}
       >
         <div className="testimonials__container">
           <div className="testimonial__rowOne">
-            <div className="testimonial__cardOne">
+            {/* add the hidden-leftSlide to cardOne*/}
+            <div
+              className={`testimonial__cardOne hidden-rightSlide ${
+                isTestimonialsVisible ? "show" : ""
+              }`}
+            >
               <img
                 className="tc__blobOne"
                 src={testimonialCardBlobOne}
@@ -42,7 +62,13 @@ function Testimonials() {
                 heardfrom! <i>- Michelle</i>
               </p>
             </div>
-            <div className="testimonials__textContainer">
+            {/* add the hidden-rightSlide to the Main Text */}
+
+            <div
+              className={`testimonials__textContainer hidden-leftSlide  ${
+                isTestimonialsVisible ? "show" : ""
+              }`}
+            >
               <h1 className="testimonials__mainText">
                 The best way to discover new{" "}
                 <span className="pinkText">love</span> for music
@@ -56,7 +82,12 @@ function Testimonials() {
             </div>
           </div>
           <div className="testimonial__rowTwo">
-            <div className="testimonial__cardOne">
+            {/* add the hidden-leftSlide to the testimonial card*/}
+            <div
+              className={`testimonial__cardOne hidden-rightSlide ${
+                isTestimonialsVisible ? "show" : ""
+              }`}
+            >
               <img
                 className="tc__blobThree"
                 src={testimonialCardBlobThree}

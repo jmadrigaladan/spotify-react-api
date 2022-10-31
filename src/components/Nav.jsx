@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Close } from "@material-ui/icons";
 import "./Nav.css";
 import logoPurple from "../assets/heardfrom text logo PURPLE.svg";
-import logoWhite from "../assets/heardfrom text logo WHITE.svg";
 function Nav({ analyzeMusic }) {
   const [isClassToggled, setIsClassToggled] = React.useState(false);
   return (
@@ -12,34 +11,21 @@ function Nav({ analyzeMusic }) {
         className={`nav__container ${analyzeMusic ? "analyze-music__nav" : ""}`}
       >
         <Link className="logo__container" to="/">
-          <img
-            className="logo"
-            src={analyzeMusic ? logoWhite : logoPurple}
-            alt=""
-          />
+          <img className="logo" src={logoPurple} alt="" />
         </Link>
         <ul className="nav__links">
           <li>
-            <Link
-              to="/"
-              className={`nav__link  ${analyzeMusic ? "white__text" : ""}`}
-            >
+            <Link to="/" className={`nav__link`}>
               Home
             </Link>
           </li>
           <li>
-            <Link
-              to="/analyzeMusic"
-              className={`nav__link  ${analyzeMusic ? "white__text" : ""}`}
-            >
+            <Link to="/analyzeMusic" className={`nav__link `}>
               Analyze Music
             </Link>
           </li>
           <li>
-            <Link
-              to="/contact"
-              className={`nav__link  ${analyzeMusic ? "white__text" : ""}`}
-            >
+            <Link to="/contact" className={`nav__link  `}>
               <button className="purple__btn contact__btn">Contact</button>
             </Link>
           </li>
@@ -55,42 +41,15 @@ function Nav({ analyzeMusic }) {
               isClassToggled ? "bento-menu--active" : " "
             }`}
           >
-            <div
-              data-v-48b363cf=""
-              className={analyzeMusic ? "white" : " "}
-            ></div>
-            <div
-              data-v-48b363cf=""
-              className={analyzeMusic ? "white" : " "}
-            ></div>
-            <div
-              data-v-48b363cf=""
-              className={analyzeMusic ? "white" : " "}
-            ></div>
-            <div
-              data-v-48b363cf=""
-              className={analyzeMusic ? "white" : " "}
-            ></div>
-            <div
-              data-v-48b363cf=""
-              className={analyzeMusic ? "white" : " "}
-            ></div>
-            <div
-              data-v-48b363cf=""
-              className={analyzeMusic ? "white" : " "}
-            ></div>
-            <div
-              data-v-48b363cf=""
-              className={analyzeMusic ? "white" : " "}
-            ></div>
-            <div
-              data-v-48b363cf=""
-              className={analyzeMusic ? "white" : " "}
-            ></div>
-            <div
-              data-v-48b363cf=""
-              className={analyzeMusic ? "white" : " "}
-            ></div>
+            <div data-v-48b363cf=""></div>
+            <div data-v-48b363cf=""></div>
+            <div data-v-48b363cf=""></div>
+            <div data-v-48b363cf=""></div>
+            <div data-v-48b363cf=""></div>
+            <div data-v-48b363cf=""></div>
+            <div data-v-48b363cf=""></div>
+            <div data-v-48b363cf=""></div>
+            <div data-v-48b363cf=""></div>
           </div>
           <div
             className={`close__btn-menu ${

@@ -1,13 +1,14 @@
 import React from "react";
 import "./AnalyzeMusic.css";
-import Nav from "../components/Nav.jsx";
-
+import logoWhite from "../assets/heardfrom text logo WHITE.svg";
+import { Link } from "react-router-dom";
+import { Close } from "@material-ui/icons";
 function AnalyzeMusic() {
+  const [isClassToggled, setIsClassToggled] = React.useState(false);
   return (
     <>
       <section id="analyze-music__landing">
-        <Nav analyzeMusic={true} />
-        {/* <nav>
+        <nav>
           <div className="nav__container analyze-music__nav">
             <div className="nav__container--wrapper">
               <Link className="logo__container" to="/">
@@ -99,7 +100,7 @@ function AnalyzeMusic() {
             </div>
           </div>
           <div className="overlay"></div>
-        </nav> */}
+        </nav>
       </section>
       <section id="search-results">
         <div className="search-results--container">

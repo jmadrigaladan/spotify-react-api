@@ -75,6 +75,10 @@
   transition: all 0.4s ease;
 }
 
+.white__text {
+  color: #fff;
+}
+
 @media (max-width: 1023px) {
   .nav__links {
     width: 60%;

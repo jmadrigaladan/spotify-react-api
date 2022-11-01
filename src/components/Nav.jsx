@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 import { Close } from "@material-ui/icons";
 import "./Nav.css";
 import logoPurple from "../assets/heardfrom text logo PURPLE.svg";
-function Nav({ analyzeMusic }) {
+function Nav() {
   const [isClassToggled, setIsClassToggled] = React.useState(false);
   return (
     <nav>
-      <div
-        className={`nav__container ${analyzeMusic ? "analyze-music__nav" : ""}`}
-      >
+      <div className={`nav__container `}>
         <Link className="logo__container" to="/">
           <img className="logo" src={logoPurple} alt="" />
         </Link>
@@ -74,31 +72,7 @@ function Nav({ analyzeMusic }) {
             </Link>
           </div>
         </div>
-        {analyzeMusic ? (
-          <div className="top__container--wrapper">
-            <h1 className="analyze__music--main-text white__text">
-              Browse our music library
-            </h1>
-            <div className="search__bar--container">
-              <input
-                id="analyzeMusicSearchBar"
-                type="text"
-                placeholder="Search by Artist"
-                className="input__search-bar"
-              />
-              <button
-                id="analyzeMusicSearchBtn"
-                className="search__bar--wrapper__icon"
-              >
-                <i className="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </div>
-          </div>
-        ) : (
-          ""
-        )}
       </div>
-      {analyzeMusic ? <div className="overlay"></div> : ""}
     </nav>
   );
 }

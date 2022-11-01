@@ -1,112 +1,35 @@
 import React from "react";
 import "./AnalyzeMusic.css";
-import logoWhite from "../assets/heardfrom text logo WHITE.svg";
-import { Link } from "react-router-dom";
-import { Close } from "@material-ui/icons";
+import { LinearProgress } from "@material-ui/core";
+import { searched } from "../components/AnalyzeMusicNav.jsx";
+
+import AnalyzeMusicNav from "../components/AnalyzeMusicNav.jsx";
+
 function AnalyzeMusic() {
-  const [isClassToggled, setIsClassToggled] = React.useState(false);
+  const [searched, setSearched] = React.useState(false);
+  const ChildToParent = (childData) => {
+    console.log("Hello", childData);
+    setSearched(childData);
+  };
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setSearched(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [searched]);
   return (
     <>
-      <section id="analyze-music__landing">
-        <nav>
-          <div className="nav__container analyze-music__nav">
-            <div className="nav__container--wrapper">
-              <Link className="logo__container" to="/">
-                <img className="logo" src={logoWhite} alt="" />
-              </Link>
-              <ul className="nav__links">
-                <li>
-                  <Link to="/" className="nav__link white__text">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/analyzeMusic" className="nav__link white__text">
-                    Analyze Music
-                  </Link>
-                </li>
-                <li>
-                  <Link href="" className="nav__link">
-                    <button className="purple__btn contact__btn">
-                      Contact
-                    </button>
-                  </Link>
-                </li>
-              </ul>
-
-              <div
-                className="phone__navbar"
-                onClick={() => setIsClassToggled(!isClassToggled)}
-              >
-                <div
-                  data-v-48b363cf=""
-                  className={`bento-menu ${
-                    isClassToggled ? "bento-menu--active" : " "
-                  }`}
-                >
-                  <div data-v-48b363cfg="" className="white"></div>
-                  <div data-v-48b363cfg="" className="white"></div>
-                  <div data-v-48b363cfg="" className="white"></div>
-                  <div data-v-48b363cfg="" className="white"></div>
-                  <div data-v-48b363cfg="" className="white"></div>
-                  <div data-v-48b363cfg="" className="white"></div>
-                  <div data-v-48b363cfg="" className="white"></div>
-                  <div data-v-48b363cfg="" className="white"></div>
-                  <div data-v-48b363cfg="" className="white"></div>
-                </div>
-                <div
-                  className={`close__btn-menu ${
-                    isClassToggled ? "close__btn-menu--active" : " "
-                  }`}
-                >
-                  <Close sx={{ fontSize: "40px" }} />
-                </div>
-                <div
-                  className={`phone__menu ${
-                    isClassToggled ? "phone__menu--active" : " "
-                  }`}
-                >
-                  <Link className="phone__nav--link" to="/">
-                    Home
-                  </Link>
-                  <Link className="phone__nav--link" to="/analyzeMusic">
-                    Analyze Music
-                  </Link>
-                  <Link className="phone__nav--link" to="">
-                    Contact
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="top__container--wrapper">
-              <h1 className="analyze__music--main-text white__text">
-                Browse our music library
-              </h1>
-              <div className="search__bar--container">
-                <input
-                  id="analyzeMusicSearchBar"
-                  type="text"
-                  placeholder="Search by Artist"
-                  className="input__search-bar"
-                />
-                <button
-                  id="analyzeMusicSearchBtn"
-                  className="search__bar--wrapper__icon"
-                >
-                  <i className="fa-solid fa-magnifying-glass"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="overlay"></div>
-        </nav>
+      <section id="analyze-music__topLanding">
+        <AnalyzeMusicNav ChildToParent={ChildToParent} />
       </section>
+      {searched ? <LinearProgress color="primary" /> : ""}
+
       <section id="search-results">
+        {searched}
         <div className="search-results--container">
           <div className="search-results__text-filter--wrapper">
             <h1 className="search__results--text">Search Results:</h1>
-            <div className="filter__container">
+            {/* <div className="filter__container">
               <div className="slider">
                 <div className="range-slider">
                   <div className="text__slider--wrapper">
@@ -131,7 +54,7 @@ function AnalyzeMusic() {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="songs__search-result--container">

@@ -16,11 +16,7 @@ function AnalyzeMusic() {
     setSearchTerm(userSearchKeyword)
   }
 
-  // async function displaySearchResults(searchPhrase){
-  //   console.log("Line 22 in displaySearch Results", searchPhrase)
-  // }
   React.useEffect(() => {
-    // displaySearchResults(searchTerm)
     const timer = setTimeout(() => {
       setSearched(false);
     }, 2000);

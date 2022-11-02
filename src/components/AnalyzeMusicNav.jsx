@@ -3,13 +3,16 @@ import logoWhite from "../assets/heardfrom text logo WHITE.svg";
 import { Link } from "react-router-dom";
 import { Close } from "@material-ui/icons";
 import { Search } from "@material-ui/icons";
-function AnalyzeMusicNav({ ChildToParent }) {
+function AnalyzeMusicNav({ userSearched, userSearchTerm }) {
   const [input, setInput] = React.useState("");
   const [isClassToggled, setIsClassToggled] = React.useState(false);
   const search = (e) => {
     e.preventDefault();
-    ChildToParent(true);
-    console.log(input);
+    if(input == ""){
+      return
+    }
+    userSearched(true);
+    userSearchTerm(input)
   };
   return (
     <nav>

@@ -1,26 +1,35 @@
 import React from "react";
 import "./AnalyzeMusic.css";
 import { LinearProgress } from "@material-ui/core";
-import { searched } from "../components/AnalyzeMusicNav.jsx";
-
 import AnalyzeMusicNav from "../components/AnalyzeMusicNav.jsx";
 
 function AnalyzeMusic() {
   const [searched, setSearched] = React.useState(false);
-  const ChildToParent = (childData) => {
-    console.log("Hello", childData);
-    setSearched(childData);
+  const [searchTerm, setSearchTerm] = React.useState("")
+  const userSearched = (userData) => {
+    console.log("line 12", userData);
+    setSearched(userData);
   };
+
+  const userSearchTerm = (userSearchKeyword) => {
+    console.log("line 17", userSearchKeyword)
+    setSearchTerm(userSearchKeyword)
+  }
+
+  // async function displaySearchResults(searchPhrase){
+  //   console.log("Line 22 in displaySearch Results", searchPhrase)
+  // }
   React.useEffect(() => {
+    // displaySearchResults(searchTerm)
     const timer = setTimeout(() => {
       setSearched(false);
     }, 2000);
     return () => clearTimeout(timer);
-  }, [searched]);
+  }, [searched, searchTerm]);
   return (
     <>
       <section id="analyze-music__topLanding">
-        <AnalyzeMusicNav ChildToParent={ChildToParent} />
+        <AnalyzeMusicNav userSearched={userSearched}  userSearchTerm={userSearchTerm}/>
       </section>
       {searched ? <LinearProgress color="primary" /> : ""}
 

@@ -1,8 +1,6 @@
 .testimonials {
   height: 100vh;
   padding: 20px;
-  display: flex;
-  align-items: center;
 }
 
 .testimonials__container {
@@ -16,7 +14,6 @@
 }
 
 .testimonial__rowOne {
-  margin-top: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -133,13 +130,17 @@
     flex-direction: column-reverse;
   }
   .testimonial__rowTwo {
-    margin-top: 56px;
-    margin-bottom: 56px;
+    margin: unset;
+    margin-top: 24px;
   }
   .testimonials__textContainer {
     margin-bottom: 24px;
   }
   .testimonial__cardOne {
     width: 80%;
+  }
+  .testimonialsLink {
+    margin: unset;
+    margin-top: 8px;
   }
 }

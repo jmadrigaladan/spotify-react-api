@@ -42,7 +42,7 @@ function Features() {
             taste.
           </p>
           <div className="link__container">
-            <Link className="discovering__link purple__text">
+            <Link to="/analyzeMusic" className="discovering__link purple__text">
               Start discovering
               <ArrowForward className="arrow__link" />
             </Link>

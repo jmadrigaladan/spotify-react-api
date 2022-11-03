@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../components/Nav.jsx";
 import heroImage from "../assets/undraw_imagination_re_i0xi 1.svg";
 import "./Hero.css";
+import { Link } from "react-router-dom";
 
 function Hero() {
   const heroRef = React.useRef();
@@ -31,9 +32,11 @@ function Hero() {
               Our extensive library makes it easy to unlock new discoveries
               around the artists and genres you enjoy listening to most.
             </h3>
-            <button className="purple__btn exploring__btn">
-              Start Exploring
-            </button>
+            <Link to="/analyzeMusic">
+              <button className="purple__btn exploring__btn">
+                Start Exploring
+              </button>
+            </Link>
           </div>
         </div>
       </section>

@@ -73,7 +73,10 @@ function Testimonials() {
                 <span className="pinkText">love</span> for music
               </h1>
               <div className="testimonial__link--container">
-                <Link className="discovering__link pink testimonialsLink hover-underline-animation">
+                <Link
+                  to="/analyzeMusic"
+                  className="discovering__link pink testimonialsLink hover-underline-animation"
+                >
                   Start discovering
                   <ArrowForward className="arrow__link" />
                 </Link>

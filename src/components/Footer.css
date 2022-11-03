@@ -1,6 +1,6 @@
 footer {
   background-color: #232323;
-  min-height: 200px;
+  height: 200px;
   display: flex;
 }
 .footer__container {
@@ -25,4 +25,10 @@ footer {
 .copyright__text {
   color: white;
   margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    height: 150px;
+  }
 }

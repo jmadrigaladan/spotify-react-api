@@ -137,4 +137,7 @@
   .testimonials__textContainer {
     margin-bottom: 24px;
   }
+  .testimonial__cardOne {
+    width: 80%;
+  }
 }

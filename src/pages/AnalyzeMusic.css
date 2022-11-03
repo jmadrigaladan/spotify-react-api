@@ -1,3 +1,7 @@
+#analyzeMusic{
+  height: 100vh;
+}
+
 #analyze-music__topLanding {
   height: 300px;
   padding: 20px;
@@ -198,7 +202,6 @@ input[type="range"]:focus {
 
 .horizontal__card {
   width: 250px;
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,88 +215,23 @@ input[type="range"]:focus {
   transform: scale(0.98);
 }
 
-.song__img--wrapper {
+.noSearch__container {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-.song__img {
-  width: 100%;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.horizontal__card--wrapper {
-  height: 400px;
-  display: flex;
-  width: 250px;
-  border-radius: 5px;
-  flex-direction: column;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-}
-
-.text__container {
-  margin-top: 16px;
-  margin-left: 8px;
-  text-align: left;
-  cursor: default;
-}
-
-.song__title--text {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.artist__name--text {
-  font-weight: 300;
-  font-size: 16px;
-}
-
-.spotify__text--container {
-  width: 100%;
-  margin-top: 16px;
-}
-.spotify__song--link {
-  display: flex;
-  align-items: center;
-}
-.listen__on--text {
-  margin-right: 12px;
-  color: #242424;
+.searchMain__text {
+  margin-top: 24px;
+  font-weight: 400;
   font-size: 18px;
 }
 
-.spotify__logo {
-  width: 40%;
-}
-
-/* 
-  
-  Loading 
-  
-  */
-
-#loading {
-  margin: auto;
-  animation: spin 1s infinite linear;
-  visibility: hidden;
-}
-.fa-spinner {
-  font-size: 32px;
-  color: #6c63ff;
-}
-#loading.display {
-  visibility: visible;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.noSearch__img {
+  width: 30%;
+  max-width: 300px;
 }
 
 @media (max-width: 1023px) {

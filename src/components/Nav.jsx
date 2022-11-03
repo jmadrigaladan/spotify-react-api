@@ -13,18 +13,23 @@ function Nav() {
         </Link>
         <ul className="nav__links">
           <li>
-            <Link to="/" className={`nav__link`}>
+            <Link to="/" className={`nav__link hover__effect`}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/analyzeMusic" className={`nav__link `}>
+            <Link to="/analyzeMusic" className={`nav__link hover__effect`}>
               Analyze Music
             </Link>
           </li>
           <li>
-            <Link to="/contact" className={`nav__link  `}>
-              <button className="purple__btn contact__btn">Contact</button>
+            <Link to="/" className={`nav__link`}>
+              <button
+                onClick={() => alert("feature not implemented yet")}
+                className="purple__btn contact__btn"
+              >
+                Contact
+              </button>
             </Link>
           </li>
         </ul>

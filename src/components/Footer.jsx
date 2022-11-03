@@ -9,13 +9,20 @@ function Footer() {
       <div className="footer__container">
         <img className="footer__image" src={logoWhite} alt="" />
         <div className="footer__links--container">
-          <Link className="footer__link" to={"/"}>
+          <Link className="footer__link hover__effect--white" to={"/"}>
             Home
           </Link>
-          <Link className="footer__link" to={"/analyzeMusic"}>
+          <Link
+            className="footer__link hover__effect--white"
+            to={"/analyzeMusic"}
+          >
             Analyze Music
           </Link>
-          <Link className="footer__link" to={"/contact"}>
+          <Link
+            className="footer__link hover__effect--white"
+            to={""}
+            onClick={() => alert("feature not implemented yet")}
+          >
             Contact
           </Link>
         </div>

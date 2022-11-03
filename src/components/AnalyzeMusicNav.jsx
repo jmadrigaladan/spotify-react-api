@@ -4,19 +4,16 @@ import { Link } from "react-router-dom";
 import { Close } from "@material-ui/icons";
 import { Search } from "@material-ui/icons";
 
-
-
 function AnalyzeMusicNav({ userSearched, userSearchTerm }) {
   const [input, setInput] = React.useState("");
   const [isClassToggled, setIsClassToggled] = React.useState(false);
   const search = (e) => {
-    console.log("nav calls search function")
     e.preventDefault();
-    if(input === ""){
-      return
+    if (input === "") {
+      return;
     }
     userSearched(true);
-    userSearchTerm(input)
+    userSearchTerm(input);
   };
   return (
     <nav>
@@ -27,18 +24,29 @@ function AnalyzeMusicNav({ userSearched, userSearchTerm }) {
           </Link>
           <ul className="nav__links">
             <li>
-              <Link to="/" className="nav__link white__text">
+              <Link
+                to="/"
+                className="nav__link white__text hover__effect--white"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/analyzeMusic" className="nav__link white__text">
+              <Link
+                to="/analyzeMusic"
+                className="nav__link white__text hover__effect--white"
+              >
                 Analyze Music
               </Link>
             </li>
             <li>
-              <Link href="" className="nav__link">
-                <button className="purple__btn contact__btn">Contact</button>
+              <Link to="" className="nav__link">
+                <button
+                  onClick={() => alert("feature not implemented yet")}
+                  className="purple__btn contact__btn"
+                >
+                  Contact
+                </button>
               </Link>
             </li>
           </ul>

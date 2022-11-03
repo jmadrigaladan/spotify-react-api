@@ -19,7 +19,6 @@ function Testimonials() {
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      console.log("entry", entry);
       if (entry.isIntersecting) {
         setIsTestimonialsVisible(entry.isIntersecting);
         observer.unobserve(entry.target);

@@ -15,7 +15,6 @@ function Features() {
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      console.log("entry", entry);
       if (entry.isIntersecting) {
         setIsFeaturesVisible(entry.isIntersecting);
         observer.unobserve(entry.target);

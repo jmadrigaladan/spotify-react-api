@@ -16,6 +16,7 @@
 }
 
 .testimonial__rowOne {
+  margin-top: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -132,7 +133,8 @@
     flex-direction: column-reverse;
   }
   .testimonial__rowTwo {
-    margin-top: 54px;
+    margin-top: 56px;
+    margin-bottom: 56px;
   }
   .testimonials__textContainer {
     margin-bottom: 24px;

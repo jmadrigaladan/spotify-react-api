@@ -98,7 +98,7 @@
 
 @media (max-width: 1129px) {
   .featuresText__container {
-    width: 50%;
+    width: 60%;
   }
   .features__mainText {
     font-size: 36px;
@@ -206,5 +206,8 @@
   }
   .cardOne__deckHoriz {
     margin-bottom: 24px;
+  }
+  .arrow__link {
+    margin: unset;
   }
 }

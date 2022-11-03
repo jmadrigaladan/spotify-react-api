@@ -20,11 +20,11 @@ function MusicCard({ artistName, songName, songCover, songLink }) {
           <div className="songText__container">
             <h1 className="song__title--text">{songName}</h1>
             <h2 className="artist__name--text">{artistName}</h2>
-            <div className="controls__container">
+            {/* <div className="controls__container">
               <SkipPrevious />
               <PlayArrow />
               <SkipNext />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -14,11 +14,11 @@ function MusicCardHoriz({ artistName, songName, songCover, songLink }) {
         <div className="songInfo__container">
           <h1 className="songTitle__text">{songName}</h1>
           <h1 className="artistName__text">{artistName}</h1>
-          <div className="songControls__container">
+          {/* <div className="songControls__container">
             <SkipPrevious />
             <PlayArrow />
             <SkipNext />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

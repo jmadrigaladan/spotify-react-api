@@ -88,15 +88,15 @@
 
 .blob {
   position: absolute;
-  top: -48px;
-  left: 186px;
+  top: -64px;
+  left: 205px;
 }
 
 .deck__horiz {
   display: none;
 }
 
-@media (max-width: 1079px) {
+@media (max-width: 1129px) {
   .featuresText__container {
     width: 50%;
   }
@@ -120,9 +120,9 @@
     margin-left: 56px;
   }
 
-  .songText__container {
+  /* .songText__container {
     margin: 0 0 8px 0;
-  }
+  } */
 
   .song__title--text,
   .artist__name--text {

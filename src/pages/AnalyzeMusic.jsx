@@ -2,38 +2,58 @@ import React from "react";
 import "./AnalyzeMusic.css";
 import { LinearProgress } from "@material-ui/core";
 import AnalyzeMusicNav from "../components/AnalyzeMusicNav.jsx";
+import { topTracks } from "../api_requests/spotifyApi.js";
+import MusicCard from "../components/MusicCard.jsx";
+import LoadingCard from "../components/LoadingCard";
 
 function AnalyzeMusic() {
-  const [searched, setSearched] = React.useState(false);
-  const [searchTerm, setSearchTerm] = React.useState("")
+  const [searched, setSearched] = React.useState();
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const [artistTopTracks, setArtistTopTracks] = React.useState();
+  const [loading, setLoading] = React.useState(true);
+
   const userSearched = (userData) => {
-    console.log("line 12", userData);
     setSearched(userData);
   };
 
   const userSearchTerm = (userSearchKeyword) => {
-    console.log("line 17", userSearchKeyword)
-    setSearchTerm(userSearchKeyword)
-  }
+    setSearchTerm(userSearchKeyword);
+  };
 
   React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setSearched(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, [searched, searchTerm]);
+    if (searched) {
+      const timer = setTimeout(async () => {
+        console.log("line 26 in the if statement, searched is true");
+        console.log(searched);
+        setArtistTopTracks(await topTracks(searchTerm));
+        setSearched(false);
+        setLoading(false);
+      }, 1500);
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [searched]);
+
   return (
     <>
       <section id="analyze-music__topLanding">
-        <AnalyzeMusicNav userSearched={userSearched}  userSearchTerm={userSearchTerm}/>
+        <AnalyzeMusicNav
+          userSearched={userSearched}
+          userSearchTerm={userSearchTerm}
+        />
       </section>
-      {searched ? <LinearProgress color="primary" /> : ""}
+      {!searched ? "" : <LinearProgress color="primary" />}
 
       <section id="search-results">
         {searched}
         <div className="search-results--container">
           <div className="search-results__text-filter--wrapper">
-            <h1 className="search__results--text">Search Results:</h1>
+            <h1 className="search__results--text">
+              {searchTerm !== ""
+                ? `Search Results for "${searchTerm}"`
+                : `Search Results :`}
+            </h1>
             {/* <div className="filter__container">
               <div className="slider">
                 <div className="range-slider">
@@ -64,9 +84,38 @@ function AnalyzeMusic() {
 
           <div className="songs__search-result--container">
             <div className="horizonatal__cards--container">
-              <div id="loading">
-                <i className="fa-solid fa-spinner"></i>
-              </div>
+              {/* {searched
+                ? artistTopTracks?.map((track) => {
+                    console.log(track.artists[0].name);
+                  })
+                : ""} */}
+              {searchTerm !== "" ? (
+                !loading ? (
+                  artistTopTracks?.map((track) => (
+                    <MusicCard
+                      artistName={track.artists[0].name}
+                      songName={track.name}
+                      songLink={track.external_urls.spotify}
+                      songCover={track.album.images[1].url}
+                    />
+                  ))
+                ) : (
+                  <>
+                    <LoadingCard />
+                    <LoadingCard />
+                    <LoadingCard />
+                    <LoadingCard />
+                    <LoadingCard />
+                    <LoadingCard />
+                    <LoadingCard />
+                    <LoadingCard />
+                    <LoadingCard />
+                    <LoadingCard />
+                  </>
+                )
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </div>

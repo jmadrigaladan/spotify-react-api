@@ -92,7 +92,7 @@ function AnalyzeMusic() {
                         alt=""
                       />
                       <h1 className="searchMain__text">
-                        Waiting for Search...
+                        Waiting to Search...
                       </h1>
                     </div>
                   </>
